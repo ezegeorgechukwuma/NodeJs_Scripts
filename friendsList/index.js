@@ -74,6 +74,7 @@ app.post("/login", (req, res) => {
         // Generate JWT access token
         let accessToken = jwt.sign({
             data: password
+            // password expires in 60 seconds
         }, 'access', { expiresIn: 60 });
 
         // Store access token and username in session
